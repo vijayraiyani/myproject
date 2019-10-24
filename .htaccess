@@ -1,6 +1,5 @@
 RewriteEngine On
 
-
 RewriteCond %{REQUEST_URI} "/fg/admin/" [OR]
 RewriteCond %{REQUEST_URI} "/fg/feed/" [OR]
 RewriteCond %{REQUEST_URI} "/fg/autopost/" [OR]
