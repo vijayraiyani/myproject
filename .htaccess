@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} "/fg/admin/" [OR]
+RewriteCond %{REQUEST_URI} "/fg/feed/" [OR]
+RewriteCond %{REQUEST_URI} "/fg/autopost/" [OR]
+RewriteCond %{REQUEST_URI} "/fg/facebook/" [OR]
+RewriteCond %{REQUEST_URI} "/fg/php_speedy/"
+RewriteRule (.*) $1 [L]
+
+RewriteRule ^([^/.]+)$ /fg/index.php?pid=$1 [L]
+RewriteRule ^([^/.]+)/([^/.]+)$ /fg/index.php?pid=$1&id=$2 [L]
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)$ /fg/index.php?pid=$1&id=$2&subid=$3 [L]
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)$ /fg/index.php?pid=$1&id=$2&subid=$3&pageid=$4 [L]
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)$ /fg/index.php?pid=$1&id=$2&subid=$3&pageid=$4&cmtid=$5 [L]
